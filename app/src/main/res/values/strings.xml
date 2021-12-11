@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Project</string>
+    <string name="sign_up_logo">sign up logo</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="sign_up">sign up</string>
 </resources>
