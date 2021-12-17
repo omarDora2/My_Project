@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import com.motatwera.myproject.MainActivity;
 import com.motatwera.myproject.R;
+import com.motatwera.myproject.ui.auth.SignUpActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 finish();
 

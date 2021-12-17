@@ -7,4 +7,8 @@
     <string name="password">Password</string>
     <string name="confirm_password">confirm password</string>
     <string name="sign_up">sign up</string>
+
+
+    <string name="welcome_logo">welcome logo</string>
+    <string name="error_name_register">Please add ur name</string>
 </resources>
