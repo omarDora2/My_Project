@@ -112,7 +112,7 @@ public class SignUpActivity extends AppCompatActivity {
     //on fireBase documentation
     private void register(String email, String password, String name, String phone) {
 
-       // progressBar.setVisibility(View.VISIBLE);
+       progressBar.setVisibility(View.VISIBLE);
 
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
@@ -122,7 +122,7 @@ public class SignUpActivity extends AppCompatActivity {
                         sendData(email, password, name, phone);
                     } else {
                         // handle error
-                     //   progressBar.setVisibility(View.GONE);
+                     progressBar.setVisibility(View.GONE);
                         Toast.makeText(SignUpActivity.this, "Error " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
 
@@ -150,7 +150,7 @@ public class SignUpActivity extends AppCompatActivity {
                 .addOnSuccessListener(unused -> {
 
                     Toast.makeText(SignUpActivity.this, "done", Toast.LENGTH_SHORT).show();
-                 //   progressBar.setVisibility(View.GONE);
+                   progressBar.setVisibility(View.GONE);
 
 
                     // set to shared P
@@ -167,7 +167,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 })
                 .addOnFailureListener(e -> {
-                  //  progressBar.setVisibility(View.GONE);
+                   progressBar.setVisibility(View.GONE);
                     Toast.makeText(SignUpActivity.this, "Error "+e.getMessage(), Toast.LENGTH_SHORT).show();
 
                 });
