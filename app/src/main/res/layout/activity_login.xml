@@ -2,12 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#858A8E"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.auth.SignUpActivity">
-
+    tools:context=".ui.auth.LoginActivity">
     <ImageView
 
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
         android:src="@drawable/sign_up_logo" />
     <ProgressBar
         android:layout_gravity="center"
-        android:id="@+id/registerProgress"
+        android:id="@+id/loginProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -32,24 +30,7 @@
         android:layout_marginRight="8dp">
 
         <EditText
-            android:id="@+id/signUpName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/name"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp">
-
-        <EditText
-            android:id="@+id/signUpEmail"
+            android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -61,26 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp">
-
-        <EditText
-            android:id="@+id/signUpPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phone"
-            android:inputType="phone" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         app:passwordToggleEnabled="true">
 
         <EditText
-            android:id="@+id/signUpPassword"
+            android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -90,14 +56,29 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signUpButton"
+        android:id="@+id/loginButton"
         android:backgroundTint="#654E4E"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+       android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:text="@string/sign_up"
+        android:text="@string/log_in"
         app:cornerRadius="15dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createAccount"
+        android:backgroundTint="#654E4E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:text="create Account"
+        app:cornerRadius="15dp" />
+
+
 
 
 </LinearLayout>

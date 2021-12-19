@@ -10,9 +10,11 @@ import android.view.WindowManager;
 
 import com.motatwera.myproject.MainActivity;
 import com.motatwera.myproject.R;
+import com.motatwera.myproject.ui.auth.LoginActivity;
 import com.motatwera.myproject.ui.auth.SignUpActivity;
 
 public class SplashActivity extends AppCompatActivity {
+    private boolean isLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +25,30 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        isLogin = getSharedPreferences("userShared", MODE_PRIVATE)
+                .getBoolean("isLogin", false);
 
-                Intent intent = new Intent(SplashActivity.this, SignUpActivity.class);
-                startActivity(intent);
-                finish();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        new Handler().postDelayed(() -> {
+
+            Intent intent;
+            if (isLogin){
+                intent = new Intent(SplashActivity.this, MainActivity.class);
+            }else {
+                intent = new Intent(SplashActivity.this, LoginActivity.class);
+
 
             }
-        },4000);
+            startActivity(intent);
+            finish();
+
+        }, 4000);
+
+
     }
 }

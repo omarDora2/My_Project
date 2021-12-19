@@ -11,4 +11,5 @@
 
     <string name="welcome_logo">welcome logo</string>
     <string name="error_name_register">Please add ur name</string>
+    <string name="log_in">log in</string>
 </resources>

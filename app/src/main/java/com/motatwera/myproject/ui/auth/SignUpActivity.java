@@ -28,7 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
     private Button signUp;
 
 
-    String vr;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +100,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
         if (pass.length() < 6) {
-            Toast.makeText(SignUpActivity.this, "password should be 11 char", Toast.LENGTH_LONG).show();
+            Toast.makeText(SignUpActivity.this, "password should be 6 char", Toast.LENGTH_LONG).show();
             registerPassword.requestFocus();
             return;
         }
@@ -153,15 +153,8 @@ public class SignUpActivity extends AppCompatActivity {
                    progressBar.setVisibility(View.GONE);
 
 
-                    // set to shared P
-                    getSharedPreferences("userShared",MODE_PRIVATE)
-                            .edit()
-                            .putString("userName",name)
-                            .putString("phone",phone)
-                            .putBoolean("isLogin",true)
-                            .apply();
 
-                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                    startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
                     finish();
 
 
